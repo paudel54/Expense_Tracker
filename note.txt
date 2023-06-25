@@ -1,0 +1,9 @@
+//Backend:
+::npm packages=> npm install express mongoose cors nodemon dotenv
+
+//client:
+::=> 
+
+//mongo atlas: user : sansrit
+               Password: CmyykmTpXIhoPuZ0
+               
