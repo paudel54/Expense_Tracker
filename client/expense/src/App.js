@@ -3,13 +3,13 @@ import styled from "styled-components";
 import bg from './img/bg1.png'
 import { MainLayout, InnerLayout } from "./styles/Layouts";
 import Orb from './Components/Orb/Orb';
-
+import Navigation from "./Navigation/Navigation";
 function App() {
   return (
     <AppStyled bg={bg} className='App'>
       <Orb />
       <MainLayout>
-        <h1>Hello I am form main layout check padding please. </h1>
+        <Navigation />
       </MainLayout>
     </AppStyled>
   );
