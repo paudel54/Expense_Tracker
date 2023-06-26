@@ -6,4 +6,11 @@
 
 //mongo atlas: user : sansrit
                Password: CmyykmTpXIhoPuZ0
-               
+
+
+In React, the /:id syntax is commonly used in the context of routing and URL parameters. It is a placeholder that captures a dynamic value from the URL and passes it as a parameter to a React component.
+
+When you define a route with /:id in your React application, it means that the URL can have a variable segment after the slash (/). This segment can be any value, and it will be captured and made available as a parameter named id in the component that is rendered for that route.
+
+http://localhost:5000/api/v1/delete-income/6498226dbe8289cd12e8d52a
+const { id } = req.params;

@@ -43,6 +43,7 @@ exports.getIncomes = async (req, res) => {
 // Controllers to delete Income datas. 
 exports.deleteIncome = async (req, res) => {
     const { id } = req.params;
+    // console.log('Lets see what :/ does inreact as dynamic value on url as params', req.params);
     IncomeSchema.findByIdAndDelete(id)
         .then((income) => {
             res.status(200).json({ message: 'Income Deleted' })
