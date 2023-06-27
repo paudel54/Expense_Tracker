@@ -8,10 +8,14 @@ import { useState, useMemo } from "react";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Income from "./Components/Incomes/Incomes";
 import Expenses from "./Components/Expenses/Expenses";
+import { useGlobalContext } from "./context/globalContext";
 
 function App() {
   const [active, setActive] = useState(1)
   // on click on menu Item switching the Dashboard
+  const global = useGlobalContext();
+  console.log(global);
+
   const displayData = () => {
     switch (active) {
       case 1:
