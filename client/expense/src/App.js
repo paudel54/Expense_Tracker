@@ -4,12 +4,43 @@ import bg from './img/bg1.png'
 import { MainLayout, InnerLayout } from "./styles/Layouts";
 import Orb from './Components/Orb/Orb';
 import Navigation from "./Navigation/Navigation";
+import { useState, useMemo } from "react";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Income from "./Components/Incomes/Incomes";
+import Expenses from "./Components/Expenses/Expenses";
+
 function App() {
+  const [active, setActive] = useState(1)
+  // on click on menu Item switching the Dashboard
+  const displayData = () => {
+    switch (active) {
+      case 1:
+        return <Dashboard />
+      case 2:
+        return <Dashboard />
+      case 3:
+        return <Income />
+      case 4:
+        return <Expenses />
+      default:
+        return <Dashboard />
+    }
+  }
+
+
+
+  const orbMemo = useMemo(() => {
+    return <Orb />
+  }, [])
   return (
     <AppStyled bg={bg} className='App'>
+      {orbMemo}
       <Orb />
       <MainLayout>
-        <Navigation />
+        <Navigation active={active} setActive={setActive} />
+        <main>
+          {displayData()}
+        </main>
       </MainLayout>
     </AppStyled>
   );

@@ -2,10 +2,8 @@
 ::npm packages=> npm install express mongoose cors nodemon dotenv
 
 //client:
-::=> 
-
-//mongo atlas: user : sansrit
-               Password: CmyykmTpXIhoPuZ0
+::=> npm packages => axios chart.js moment react-chartjs2 react-datepicker styled-components 
+moment.js is used for validating, manipulating and fromatting dates. 
 
 
 In React, the /:id syntax is commonly used in the context of routing and URL parameters. It is a placeholder that captures a dynamic value from the URL and passes it as a parameter to a React component.

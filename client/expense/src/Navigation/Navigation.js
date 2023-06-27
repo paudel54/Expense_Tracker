@@ -3,19 +3,22 @@ import styled from 'styled-components'
 import { menuItems } from '../utils/menuItems'
 const avatar = 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-512.png'
 
-const Navigation = () => {
+const Navigation = ({ active, setActive }) => {
     return (
         <NavStyled>
             <div className='user-con'>
                 <img src={avatar} alt="user icon" />
                 <div className='text'>
-                    <h2>Andreas</h2>
+                    <h2>Marie</h2>
                     <p>Your Money</p>
                 </div>
             </div>
             <ul className='menu-items'>
                 {menuItems.map((item) => {
-                    return <li key={item.id}>
+                    return <li key={item.id}
+                        onClick={() => setActive(item.id)}
+                        className={active === item.id ? 'active' : ''}
+                    >
                         {item.icon}
                         <span>{item.title}</span>
                     </li>
